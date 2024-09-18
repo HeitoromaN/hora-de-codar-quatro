@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alunos</title>
+</head>
+
+<body>
+    <script>
+        var estudantes = [];
+        while (true) {
+            var nome = prompt("Digite o nome do aluno ou PARE para encerrar");
+            if (nome.toUpperCase() === "PARE") {
+                break;
+            }
+            if (nome === "" || nome === null) {
+                alert("Nome inválido, tente novamente.");
+                continue;
+                estudantes.push(nome);
+            }
+        }
+
+
+        alert("Total de estudantes cadastrados: " + estudantes.length);
+
+        if (estudantes.length > 0) {
+            alert("Estudantes cadastrados: \n" + estudantes.join("\n"));
+        } else {
+            alert("Nenhum estudante foi cadastrado.");
+        }
+    </script>
+</body>
+
+</html>

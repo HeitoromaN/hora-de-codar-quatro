@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de frutas</title>
+</head>
+
+<body>
+    <script>
+        lista_de_frutas = ["Banana", "Maçã", "Pera", "Uva", "Melancia", "Abacaxi", "Morango", "Laranja", "Limão", "Manga"];
+        function gerenciarListaDeCompras() {
+            while (lista_de_frutas.length > 0) {
+                var fruta_retirada = prompt("Lista de frutas: \n" + lista_de_frutas.join("\n") + "\n Digite o nome de uma fruta para retirar da lista ");
+                if (lista_de_frutas.includes(fruta_retirada)) {
+                    var index = lista_de_frutas.indexOf(fruta_retirada);
+                    lista_de_frutas.splice(index, 1);
+                    alert("A fruta " + fruta_retirada + " foi retirada da lista.");
+                    alert("Frutas restantes na lista: \n" + lista_de_frutas.join("\n"));
+                } else {
+                    alert("A fruta " + fruta_retirada + "não está na lista.");
+                }
+            }
+        }
+        gerenciarListaDeCompras();
+        alert("Lista de frutas finalizada.")
+    </script>
+</body>
+
+</html>
